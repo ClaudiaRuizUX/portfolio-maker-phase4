@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+javascript = Category.create!(name: "JavaScript")
+javascript.projects.create!(title: "Mini Tracker")
+
+html-css = Category.create!(name: "HTML-CSS")
+html-css.projects.create!(title: "Design Portfolio")
+
+react-js = Category.create!(name: "React-JS")
+react-js.projects.create!(title: "Al-Paca News Reader")
+
+ruby-rails = Category.create!(name: "Ruby-Rails")
+ruby-rails.projects.create!(title: "Portfolio Maker")
+
