@@ -1,3 +1,3 @@
-class Skill < ActiveRecord::Base
-	belongs_to :project
+class Skill < ApplicationRecord
+	has_many :projects
 end
