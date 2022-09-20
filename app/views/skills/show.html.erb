@@ -1,0 +1,7 @@
+<h1><%= @skill.name %></h1>
+<h3><%= pluralize(@skill.projects.count, 'Project') %></h3>
+<ul>
+  <% @skill.projects.each do |p| %>
+    <li><%= link_to p.title, project_path(p) %></li>
+  <% end %>
+</ul>

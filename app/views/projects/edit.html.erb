@@ -1,0 +1,22 @@
+<h1>Edit Project</h1>
+
+<%= form_for(@project) do |p| %>
+  <div class="field">
+    <%= p.label :title, 'Project Title:' %><br>
+    <%= p.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= p.label :description, 'Project Description:' %><br>
+    <%= p.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= p.label :skill_id, 'Project Skill:' %><br>
+    <%= p.collection_radio_buttons :skill_id, @skills, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= p.submit %>
+  </div>
+<% end %>
