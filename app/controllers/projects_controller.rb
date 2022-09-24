@@ -28,6 +28,19 @@ class ProjectsController < ApplicationController
 	  redirect_to project_path(project)
 	end
 
+	def destroy
+		Project.find(params[:id]).destroy
+		redirect_to projects_url
+	end
+
+	# def destroy
+	# 	@project.destroy
+		# respond_to do |format|
+		#   format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
+		#   format.json { head :no_content }
+		# end
+		# end
+
   private
 
   def project_params

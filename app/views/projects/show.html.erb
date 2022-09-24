@@ -1,3 +1,6 @@
-# <h1><%= @project.title %></h1>
-# <p><%= @project.description %></p>
-# <h3>Skill: <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill %></h3>
+<h1><%= @project.title %></h1>
+<h3>Skill: <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill %></h3>
+<p><%= @project.description %></p>
+
+<%= link_to "edit", edit_project_path(@project) %>
+<%= button_to "Delete Project", project_path(@project), method: :delete %>
