@@ -6,3 +6,5 @@
     <li><%= link_to p.title, project_path(p) %></li>
   <% end %>
 </ul>
+<%= link_to "edit", edit_skill_path(@skill) %>
+<%= button_to "Delete Skill", skill_path(@skill), method: :delete %>

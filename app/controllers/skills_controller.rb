@@ -12,8 +12,8 @@ class SkillsController < ApplicationController
     end
   
     def create
-      skill = Skill.create(category_params)
-      redirect_to skill_path(category)
+      skill = Skill.create(skill_params)
+      redirect_to skill_path(skill)
     end
   
     def edit
@@ -24,6 +24,11 @@ class SkillsController < ApplicationController
       skill = Skill.find(params[:id])
       skill.update(skill_params)
       redirect_to skill_path(skill)
+    end
+
+    def destroy
+      Skill.find(params[:id]).destroy
+      redirect_to skills_url
     end
   
     private
