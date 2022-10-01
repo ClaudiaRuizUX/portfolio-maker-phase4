@@ -10,16 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220924230609) do
+ActiveRecord::Schema.define(version: 20221001101754) do
 
   create_table "projects", force: :cascade do |t|
-    t.string  "title"
-    t.text    "description"
-    t.integer "skill_id"
+    t.string "title"
+    t.text   "description"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "skills", force: :cascade do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "project_id"
+    t.integer "section_id"
   end
 
 end

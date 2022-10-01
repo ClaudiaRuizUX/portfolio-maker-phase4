@@ -9,6 +9,7 @@ class SkillsController < ApplicationController
   
     def new
       @skill = Skill.new
+      # @projects = Project.all
     end
   
     def create

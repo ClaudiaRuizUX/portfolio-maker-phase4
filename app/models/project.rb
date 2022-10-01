@@ -1,3 +1,4 @@
 class Project < ApplicationRecord
-	belongs_to :skill
+	has_many :skills
+	has_many :sections, through: :skills
 end
