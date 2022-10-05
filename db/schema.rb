@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20221001101754) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
   end
 
   create_table "skills", force: :cascade do |t|

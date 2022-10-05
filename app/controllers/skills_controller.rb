@@ -9,9 +9,9 @@ class SkillsController < ApplicationController
   
     def new
       @skill = Skill.new
-      # @projects = Project.all
+       @projects = Project.all
     end
-  
+
     def create
       skill = Skill.create(skill_params)
       redirect_to skill_path(skill)

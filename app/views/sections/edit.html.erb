@@ -3,13 +3,13 @@
 
 <%= form_for(@section) do |p| %>
   <div class="field">
-    <%= p.label :name, 'Section Name:' %><br>
-    <%= p.text_field :name %>
+    <%= p.label :title, 'Section Name:' %><br>
+    <%= p.text_field :title %>
   </div>
 
   <div class="field">
     <%= p.label :skill_id, 'Section Skills:' %><br>
-    <%= p.collection_radio_buttons :skill_id, @skills, :id, :name %>
+    <%= p.collection_check_boxes :skill_ids, @skills, :id, :name %>
   </div>
 
   <div class="actions">

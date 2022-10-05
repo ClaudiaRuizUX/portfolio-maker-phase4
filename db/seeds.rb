@@ -1,11 +1,8 @@
-JavaScript = Skill.create!(name: "JavaScript")
-JavaScript.projects.create!(title: "Mini Tracker", description: "track prices")
+Software = Section.create!(title: "Software")
+Design = Section.create!(title: "Design")
 
-HTMLCSS = Skill.create!(name: "HTML-CSS")
-HTMLCss.projects.create!(title: "Design Portfolio", description: "amazing old portfolio")
+Calculator = Project.create!(title: "Calculator", description: "distances")
+Map = Project.create!(title: "Map", description: "use Esri")
 
-ReactJS = Skill.create!(name: "React-JS")
-ReactJS.projects.create!(title: "Al-Paca News Reader", description: "funny alpaca")
-
-RubyRails = Skill.create!(name: "Ruby-Rails")
-RubyRails.projects.create!(title: "Portfolio Maker", description: "interesting app")
+JavaScript = Skill.create!(name: "JavaScript", section_id: 1, project_id: 1)
+Wireframes = Skill.create!(name: "Wireframes", section_id: 2, project_id: 2)

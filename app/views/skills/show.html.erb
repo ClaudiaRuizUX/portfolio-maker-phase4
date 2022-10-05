@@ -1,10 +1,16 @@
 <%= link_to 'Back', skills_path %>
 <h1><%= @skill.name %></h1>
-<h3><%= pluralize(@skill.projects.count, 'Project') %></h3>
-<ul>
+<% if defined?(@skill.projects) %>
+  <h3><%= pluralize(@skill.projects.count, 'Project') %></h3>
+  <ul>
   <% @skill.projects.each do |p| %>
     <li><%= link_to p.title, project_path(p) %></li>
   <% end %>
 </ul>
+<% else %>
+  <h3>No Projects</h3>
+<% end %>
+
 <%= link_to "edit", edit_skill_path(@skill) %>
 <%= button_to "Delete Skill", skill_path(@skill), method: :delete %>
+

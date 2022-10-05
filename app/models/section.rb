@@ -1,4 +1,4 @@
 class Section < ApplicationRecord
-	belongs_to :section
-	belongs_to :project
+	has_many :skills
+	has_many :projects, through: :skills
 end

@@ -1,6 +1,13 @@
 
 <h1><%= @section.title %></h1>
-<h3>Skill: <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill %></h3>
 
 <%= link_to "edit", edit_section_path(@section) %>
 <%= button_to "Delete Section", section_path(@section), method: :delete %>
+
+<% if defined?(@section.skills) %>
+  <% @section.skills.each do |t| %>
+    <h3><%= link_to t.name, skill_path(t.id) if t.id %></h3>
+  <% end %>
+<% else %>
+  <h3>No Skills</h3>
+<% end %>

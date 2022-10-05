@@ -13,8 +13,8 @@
   </div>
 
   <div class="field">
-    <%= p.label :skill_id, 'Project Skill:' %><br>
-    <%= p.collection_radio_buttons :skill_id, @skills, :id, :name %>
+    <%= p.label :skill_id, 'Project Skills:' %><br>
+    <%= p.collection_check_boxes :skill_ids, @skills, :id, :name %>
   </div>
 
   <div class="actions">

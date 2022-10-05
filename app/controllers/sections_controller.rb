@@ -36,6 +36,6 @@ class SectionsController < ApplicationController
   private
 
   def section_params
-    params.require(:section).permit(:name)
+    params.require(:section).permit(:title, skill_ids: [])
   end
 end
