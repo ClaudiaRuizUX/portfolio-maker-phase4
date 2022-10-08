@@ -4610,3 +4610,2287 @@ app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.5ms)
+Started GET "/" for ::1 at 2022-10-08 13:23:54 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 937ms (Views: 910.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-08 13:24:01 +1100
+Started GET "/auth/github/callback?code=712b25e385ba339cf4f6&state=c5771162a052d51b5897e44c01cc93ef36ea03515c780470" for ::1 at 2022-10-08 13:24:02 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"712b25e385ba339cf4f6", "state"=>"c5771162a052d51b5897e44c01cc93ef36ea03515c780470"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3:   <h1><%= @user.name %></h1>
+    4:   <h2>GitHub UID: <%= @user.uid %></h2>
+    5:   <ul>
+    6:   <% @sections.each do |section| %>
+    7:     <li><%= link_to section.title, section_path(section) %></li>
+    8:   <% end %>
+    9:   </ul>
+  
+app/views/sections/index.html.erb:6:in `_app_views_sections_index_html_erb___3981419997384674697_70187405864380'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.4ms)
+Started POST "/auth/github" for ::1 at 2022-10-08 13:24:59 +1100
+Started GET "/auth/github/callback?code=ea62b93634aef57fe569&state=a79870cb11cd8d189e08874d335a931cb9bc26bff09350fe" for ::1 at 2022-10-08 13:25:00 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"ea62b93634aef57fe569", "state"=>"a79870cb11cd8d189e08874d335a931cb9bc26bff09350fe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3:   <h1><%= @user.name %></h1>
+    4:   <h2>GitHub UID: <%= @user.uid %></h2>
+    5:   <ul>
+    6:   <% @sections.each do |section| %>
+    7:     <li><%= link_to section.title, section_path(section) %></li>
+    8:   <% end %>
+    9:   </ul>
+  
+app/views/sections/index.html.erb:6:in `_app_views_sections_index_html_erb___3981419997384674697_70187420334940'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.8ms)
+Started GET "/auth/github/callback?code=ea62b93634aef57fe569&state=a79870cb11cd8d189e08874d335a931cb9bc26bff09350fe" for ::1 at 2022-10-08 13:25:03 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /Users/mac/.rvm/gems/ruby-2.6.1/bin/rake:25)
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSkills (20221001101709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101709"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20221001101724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text)[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101724"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20221001101734)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101734"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToSkills (20221001101754)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "skills" ADD "project_id" integer[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "skills" ADD "section_id" integer[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101754"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221007072014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007072014"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-08 02:25:45.200242"], ["updated_at", "2022-10-08 02:25:45.200242"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2022-10-08 13:26:15 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 660ms (Views: 634.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-08 13:26:21 +1100
+Started GET "/auth/github/callback?code=5a003a76e56b1a62a54e&state=fe402def01b64ce21fc9bab8b0a98f04ba10e8635f1222a6" for ::1 at 2022-10-08 13:26:21 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"5a003a76e56b1a62a54e", "state"=>"fe402def01b64ce21fc9bab8b0a98f04ba10e8635f1222a6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("uid", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["uid", "26340792"], ["name", "Claudia Ruiz"], ["created_at", "2022-10-08 02:26:22.700898"], ["updated_at", "2022-10-08 02:26:22.700898"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 10.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3:   <h1><%= @user.name %></h1>
+    4:   <h2>GitHub UID: <%= @user.uid %></h2>
+    5:   <ul>
+    6:   <% @sections.each do |section| %>
+    7:     <li><%= link_to section.title, section_path(section) %></li>
+    8:   <% end %>
+    9:   </ul>
+  
+app/views/sections/index.html.erb:6:in `_app_views_sections_index_html_erb__1344609656728754696_70132662587380'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.3ms)
+Started GET "/" for ::1 at 2022-10-08 13:27:33 +1100
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  Rendered sections/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2022-10-08 13:29:17 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  Rendered sections/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 654ms (Views: 571.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2022-10-08 13:29:26 +1100
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.5ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  Rendered sections/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-08 13:31:11 +1100
+Started GET "/auth/github/callback?code=453ba5c75c00b2c54ab3&state=0b3d7739bcce1915616f2339ab2fde98f0e461683f3324cf" for ::1 at 2022-10-08 13:31:18 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"453ba5c75c00b2c54ab3", "state"=>"0b3d7739bcce1915616f2339ab2fde98f0e461683f3324cf"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 80ms (Views: 63.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sections/1" for ::1 at 2022-10-08 13:31:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (9.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.2ms)
+Started GET "/projects/1" for ::1 at 2022-10-08 13:31:52 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=1):
+  
+app/controllers/projects_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Software"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Design"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Calculator"], ["description", "distances"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Map"], ["description", "use Esri"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["project_id", 1], ["section_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "Wireframes"], ["project_id", 2], ["section_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2022-10-08 13:33:36 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 787ms (Views: 707.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sections/1" for ::1 at 2022-10-08 13:33:48 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (11.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.0ms)
+Started GET "/sections/1" for ::1 at 2022-10-08 13:34:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (15.4ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.5ms)
+Started GET "/sections/" for ::1 at 2022-10-08 13:35:01 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.4ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:10:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.9ms)
+Started GET "/projects" for ::1 at 2022-10-08 13:35:08 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 35.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-08 13:35:10 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 81ms (Views: 69.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-08 13:35:11 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 100ms (Views: 97.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for ::1 at 2022-10-08 13:35:12 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 65ms (Views: 52.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-08 13:35:15 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 13:35:17 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 70ms (Views: 64.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sections" for ::1 at 2022-10-08 13:35:24 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (1.9ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:10:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.9ms)
+Started GET "/skills/2" for ::1 at 2022-10-08 13:35:37 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for ::1 at 2022-10-08 13:35:40 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/2/edit" for ::1 at 2022-10-08 13:35:46 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/edit.html.erb within layouts/application (300.6ms)
+Completed 200 OK in 325ms (Views: 321.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-08 13:35:55 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-10-08 13:36:10 +1100
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered projects/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 13:36:21 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-08 13:36:24 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sections" for ::1 at 2022-10-08 13:36:44 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:10:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Software"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Design"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Calculator"], ["description", "distances"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Map"], ["description", "use Esri"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["project_id", 1], ["section_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "Wireframes"], ["project_id", 2], ["section_id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/skills/new" for ::1 at 2022-10-08 14:01:21 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (55.7ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     8:   </div>
+     9: 
+    10:   <div class="field">
+    11:     <%= p.label :section_id, 'Skill Section:' %><br>
+    12:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    13:   </div>
+    14: 
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb___4495462900729273777_70243439667380'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb___4495462900729273777_70243439667380'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.0ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 14:03:14 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     8:   </div>
+     9: 
+    10:   <div class="field">
+    11:     <%= p.label :section_id, 'Skill Section:' %><br>
+    12:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    13:   </div>
+    14: 
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb___4495462900729273777_70243413842120'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb___4495462900729273777_70243413842120'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 14:03:19 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     8:   </div>
+     9: 
+    10:   <div class="field">
+    11:     <%= p.label :section_id, 'Skill Section:' %><br>
+    12:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    13:   </div>
+    14: 
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb___4495462900729273777_70243464987220'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb___4495462900729273777_70243464987220'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /Users/mac/.rvm/gems/ruby-2.6.1/bin/rake:25)
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSkills (20221001101709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101709"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20221001101724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101724"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20221001101734)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101734"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToSkills (20221001101754)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "skills" ADD "project_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "skills" ADD "section_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101754"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221007072014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007072014"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-08 03:04:17.134671"], ["updated_at", "2022-10-08 03:04:17.134671"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Software"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Design"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Calculator"], ["description", "distances"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Map"], ["description", "use Esri"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["project_id", 1], ["section_id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "Wireframes"], ["project_id", 2], ["section_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/skills/new" for ::1 at 2022-10-08 14:04:47 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (85.3ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     8:   </div>
+     9: 
+    10:   <div class="field">
+    11:     <%= p.label :section_id, 'Skill Section:' %><br>
+    12:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    13:   </div>
+    14: 
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb___1303046911738818866_70165728053480'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb___1303046911738818866_70165728053480'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.6ms)
+Started GET "/skills/" for ::1 at 2022-10-08 14:04:53 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 423ms (Views: 421.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-08 14:04:56 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 129ms (Views: 115.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/2/edit" for ::1 at 2022-10-08 14:04:59 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 92ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 14:05:03 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sections" for ::1 at 2022-10-08 14:05:10 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 17ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:10:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+Started GET "/projects" for ::1 at 2022-10-08 14:05:52 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-08 14:06:26 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (165.7ms)
+Completed 200 OK in 294ms (Views: 285.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-08 14:06:29 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 14:06:33 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-08 14:08:27 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/project/1" for ::1 at 2022-10-08 14:09:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/project/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (11.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.9ms)
+Started GET "/projects/1" for ::1 at 2022-10-08 14:09:25 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 76ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-08 14:11:55 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-08 14:11:59 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-08 14:12:02 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/skills/2/edit" for ::1 at 2022-10-08 14:14:17 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 249ms (Views: 213.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/skills/2" for ::1 at 2022-10-08 14:14:20 +1100
+Processing by SkillsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tABbbMebG2XgtQeR2wJukXkjHiR3DvOCulnqh/Yw0rSfNmP4BOCpokxI/XQv1QqavlFFIikmsdBmznc7r1Y73Q==", "skill"=>{"name"=>"Wireframes"}, "commit"=>"Update Skill", "id"=>"2"}
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/2
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-08 14:14:20 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 14:14:24 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-08 14:14:42 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sections" for ::1 at 2022-10-08 14:14:55 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.5ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:10:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+Started GET "/skills/1/edit" for ::1 at 2022-10-08 14:18:45 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:   <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:   <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12: </div>
+    13: 
+  
+app/views/skills/edit.html.erb:10:in `block in _app_views_skills_edit_html_erb___3691550983704577019_70165752674960'
+app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb___3691550983704577019_70165752674960'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.2ms)
+Started GET "/" for ::1 at 2022-10-08 14:23:06 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-08 14:23:09 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-08 14:23:14 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 50ms (Views: 36.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-08 14:23:19 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 52ms (Views: 42.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sections" for ::1 at 2022-10-08 14:23:24 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (130.6ms)
+Started GET "/sections" for ::1 at 2022-10-08 14:29:55 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 39ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+Started GET "/sections/1" for ::1 at 2022-10-08 14:30:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (12.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.2ms)
+Started GET "/sections/1/edit" for ::1 at 2022-10-08 14:30:13 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1/edit"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (13.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.3ms)
+Started GET "/skills" for ::1 at 2022-10-08 14:30:23 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 68ms (Views: 60.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-08 14:30:25 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/2/edit" for ::1 at 2022-10-08 14:30:28 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:   <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:   <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12: </div>
+    13: 
+  
+app/views/skills/edit.html.erb:10:in `block in _app_views_skills_edit_html_erb___3691550983704577019_70165702684400'
+app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb___3691550983704577019_70165702684400'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+Started GET "/projects/2/edit" for ::1 at 2022-10-08 14:32:15 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/edit.html.erb within layouts/application (224.5ms)
+Completed 200 OK in 289ms (Views: 267.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/sections/2/edit" for ::1 at 2022-10-08 14:34:34 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/2/edit"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (6.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.8ms)
+Started GET "/sections/" for ::1 at 2022-10-08 14:35:11 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.7ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /Users/mac/.rvm/gems/ruby-2.6.1/bin/rake:25)
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSkills (20221001101709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101709"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20221001101724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101724"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20221001101734)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101734"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToSkills (20221001101754)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "skills" ADD "project_id" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "skills" ADD "section_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101754"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221007072014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007072014"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-08 06:16:04.536542"], ["updated_at", "2022-10-08 06:16:04.536542"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/sections/" for ::1 at 2022-10-08 17:16:22 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 34ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.8ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 17:17:46 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (299.8ms)
+Completed 500 Internal Server Error in 368ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     8:   </div>
+     9: 
+    10:   <div class="field">
+    11:     <%= p.label :section_id, 'Skill Section:' %><br>
+    12:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    13:   </div>
+    14: 
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb__1195540462780665441_70308434389160'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1195540462780665441_70308434389160'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (477.2ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 17:18:45 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:     <%= p.label :section_id, 'Skill Section:' %><br>
+    11:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12:   </div>
+    13: 
+  
+app/views/skills/new.html.erb:10:in `block in _app_views_skills_new_html_erb__1195540462780665441_70308375044120'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1195540462780665441_70308375044120'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (326.5ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 17:19:28 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `collection_check_boxes' for nil:NilClass):
+     8: 
+     9:   <div class="field">
+    10:    
+    11:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12:   </div>
+    13: 
+    14:   <div class="actions">
+  
+app/views/skills/new.html.erb:11:in `block in _app_views_skills_new_html_erb__1195540462780665441_70308399185060'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1195540462780665441_70308399185060'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1129.0ms)
+Started GET "/skills/new" for ::1 at 2022-10-08 17:19:45 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 1718ms (Views: 1715.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-08 17:22:50 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 525ms (Views: 428.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /Users/mac/.rvm/gems/ruby-2.6.1/bin/rake:25)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSkills (20221001101709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101709"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20221001101724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101724"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20221001101734)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101734"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToSkills (20221001101754)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "skills" ADD "project_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "skills" ADD "section_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101754"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221007072014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007072014"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-08 20:50:16.382484"], ["updated_at", "2022-10-08 20:50:16.382484"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Software"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Design"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Calculator"], ["description", "distances"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Map"], ["description", "use Esri"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["project_id", 1], ["section_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "Wireframes"], ["project_id", 2], ["section_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2022-10-09 07:51:16 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (10.9ms)
+Completed 200 OK in 38ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 07:51:30 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (56.3ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:     <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:     <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12:   </div>
+    13: 
+  
+app/views/skills/new.html.erb:10:in `block in _app_views_skills_new_html_erb__1718382016835023447_70123169439700'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1718382016835023447_70123169439700'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+Started GET "/sections" for ::1 at 2022-10-09 08:07:49 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.3ms)
+Started GET "/sections/1" for ::1 at 2022-10-09 08:08:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/1"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (22.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/projects" for ::1 at 2022-10-09 08:08:47 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 315ms (Views: 291.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 08:08:52 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 69ms (Views: 62.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:08:55 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:08:59 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:09:05 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:14:57 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 08:15:01 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:   <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:   <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12: </div>
+    13: 
+  
+app/views/skills/edit.html.erb:10:in `block in _app_views_skills_edit_html_erb__192462545677671536_70147077725220'
+app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb__192462545677671536_70147077725220'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.2ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:15:27 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-10-09 08:15:54 +1100
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered projects/new.html.erb within layouts/application (159.3ms)
+Completed 200 OK in 190ms (Views: 177.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-10-09 08:16:54 +1100
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered projects/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 08:17:04 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: <%= form_for(@skill) do |s| %>
+    5:   <div class="field">
+    6:     <%= s.label :name, 'Skill Name:' %><br>
+    7:     <%= p.text_field :title %>
+    8:   </div>
+    9: 
+   10:   <div class="actions">
+  
+app/views/skills/new.html.erb:7:in `block in _app_views_skills_new_html_erb__1333411083813934798_70147078413600'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1333411083813934798_70147078413600'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.2ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:17:19 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: <%= form_for(@skill) do |s| %>
+    5:   <div class="field">
+    6:     <%= s.label :name, 'Skill Name:' %><br>
+    7:     <%= p.text_field :name %>
+    8:   </div>
+    9: 
+   10:   <div class="actions">
+  
+app/views/skills/new.html.erb:7:in `block in _app_views_skills_new_html_erb__1333411083813934798_70147077390980'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1333411083813934798_70147077390980'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:17:21 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: <%= form_for(@skill) do |s| %>
+    5:   <div class="field">
+    6:     <%= s.label :name, 'Skill Name:' %><br>
+    7:     <%= p.text_field :name %>
+    8:   </div>
+    9: 
+   10:   <div class="actions">
+  
+app/views/skills/new.html.erb:7:in `block in _app_views_skills_new_html_erb__1333411083813934798_70147092362960'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1333411083813934798_70147092362960'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.8ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:35:29 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: <%= form_for(@skill) do |s| %>
+    5:   <div class="field">
+    6:     <%= s.label :name, 'Skill Name:' %><br>
+    7:     <%= p.text_field :name %>
+    8:   </div>
+    9: 
+   10:   <div class="actions">
+  
+app/views/skills/new.html.erb:7:in `block in _app_views_skills_new_html_erb__1333411083813934798_70147051283820'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1333411083813934798_70147051283820'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.6ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:38:07 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: <%= form_for(@skill) do |s| %>
+    5:   <div class="field">
+    6:     <%= s.label :name, 'Skill Name:' %><br>
+    7:     # <%= p.text_field :name %>
+    8:   </div>
+    9: 
+   10:   <div class="actions">
+  
+app/views/skills/new.html.erb:7:in `block in _app_views_skills_new_html_erb__1333411083813934798_70147050991800'
+app/views/skills/new.html.erb:4:in `_app_views_skills_new_html_erb__1333411083813934798_70147050991800'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+Started GET "/skills/new" for ::1 at 2022-10-09 08:38:13 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:38:20 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:38:22 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 08:38:24 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   <div class="field">
+    10:   <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:   <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12: </div>
+    13: 
+  
+app/views/skills/edit.html.erb:10:in `block in _app_views_skills_edit_html_erb__192462545677671536_70147077228640'
+app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb__192462545677671536_70147077228640'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 08:43:15 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+     7:   </div>
+     8: 
+     9:   # <div class="field">
+    10:   # <%= p.label :section_id, 'Skill Sections:' %><br>
+    11:   # <%= p.collection_check_boxes :section_ids, @sections, :id, :title %>
+    12:   # </div>
+    13: 
+  
+app/views/skills/edit.html.erb:10:in `block in _app_views_skills_edit_html_erb__192462545677671536_70147076615000'
+app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb__192462545677671536_70147076615000'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 08:43:26 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 08:44:17 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/skills" for ::1 at 2022-10-09 08:44:32 +1100
+Processing by SkillsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+AcZhV9sH5Nh9uegp0CZXwOLf5Om4iRhf9PV0ES2xRnLP/Y2FUIipN9HQSOi5lZy0IlxMmn1EP5OX2DsDnaw2g==", "skill"=>{"name"=>"ClaudiaCustomSkill"}, "commit"=>"Create Skill"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("name") VALUES (?)[0m  [["name", "ClaudiaCustomSkill"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/3
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-09 08:44:32 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:44:36 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-09 08:44:37 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/3/edit" for ::1 at 2022-10-09 08:44:40 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:44:54 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-09 08:44:55 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/skills/3/edit" for ::1 at 2022-10-09 08:44:57 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (2.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:44:59 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-09 08:45:00 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/3/edit" for ::1 at 2022-10-09 08:45:04 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/edit" for ::1 at 2022-10-09 08:45:34 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 08:46:15 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-09 08:46:19 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/skills/3" for ::1 at 2022-10-09 08:46:20 +1100
+Processing by SkillsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qpdbAHYudpu+uAwIh5KaaFY4gohHsNqklak8Sqx9V1iZr7SzPABLrAAJqouCNFVFhTqMKYin7jukJYl25r0imw==", "id"=>"3"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "skills" WHERE "skills"."id" = ?[0m  [["id", 3]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills
+Completed 302 Found in 11ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:46:20 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:46:23 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 08:46:37 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:48:19 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:50:00 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 19.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 08:50:03 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 08:50:05 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-09 08:50:06 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-09 08:50:07 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/2" for ::1 at 2022-10-09 08:50:15 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sections/2" for ::1 at 2022-10-09 08:50:22 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/sections/2"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (10.5ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+Started GET "/sections/" for ::1 at 2022-10-09 08:50:26 +1100
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+Started GET "/sections/" for ::1 at 2022-10-09 09:00:25 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SectionsController#show as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT  "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Section with 'id'=):
+  
+app/controllers/sections_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+Started GET "/skills/2" for ::1 at 2022-10-09 09:00:30 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 286ms (Views: 274.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/skills/" for ::1 at 2022-10-09 09:00:34 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/" for ::1 at 2022-10-09 09:00:39 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 35.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:00:41 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1/edit" for ::1 at 2022-10-09 09:00:45 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/edit.html.erb within layouts/application (177.6ms)
+Completed 200 OK in 203ms (Views: 197.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/1" for ::1 at 2022-10-09 09:00:48 +1100
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o756S0MGU5TyJDy5MtGSjUOvn+QqIPQqhIDbAXl34UGQhpX4CShuo0yVmjo3d12gkK2RReU3wLW1DG49M7eUgg==", "project"=>{"title"=>"Calculator", "description"=>"distances", "skill_ids"=>["", "1", "2"]}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2)[0m
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "skills" SET "project_id" = ? WHERE "skills"."id" = ?[0m  [["project_id", 1], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 16ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:00:48 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:00:51 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 160ms (Views: 157.2ms | ActiveRecord: 0.2ms)
+
+

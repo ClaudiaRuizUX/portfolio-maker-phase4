@@ -1,7 +1,7 @@
 class SectionsController < ApplicationController
 	def index
 		@sections = Section.all
-	end
+	end  
 
 	def show
 		@section = Section.find(params[:id])

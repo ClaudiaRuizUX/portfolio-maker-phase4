@@ -9,7 +9,7 @@ class SkillsController < ApplicationController
   
     def new
       @skill = Skill.new
-       @projects = Project.all
+      @projects = Project.all
     end
 
     def create
@@ -35,6 +35,6 @@ class SkillsController < ApplicationController
     private
   
     def skill_params
-      params.require(:skill).permit(:name)
+      params.require(:skill).permit(:name, project_ids: [])
     end
   end
