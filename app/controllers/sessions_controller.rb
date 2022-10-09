@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
   
       session[:user_id] = @user.id
   
-      render 'sections/index'
+      render 'projects/index'
     end
   
     def destroy
         session.delete :user_id
-        redirect_to '/'
+        redirect_to 'projects/index'
     end
 
     private

@@ -6894,3 +6894,1297 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 160ms (Views: 157.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2022-10-09 09:07:31 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (7.6ms)
+Completed 200 OK in 28ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:07:36 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mac/Development/code/portfolio-maker-phase4/app/views/projects/index.html.erb:17: syntax error, unexpected ensure, expecting end
+          ensure
+          ^~~~~~
+/Users/mac/Development/code/portfolio-maker-phase4/app/views/projects/index.html.erb:19: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/projects/index.html.erb:17: syntax error, unexpected ensure, expecting end
+app/views/projects/index.html.erb:19: syntax error, unexpected end-of-input, expecting end
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+Started GET "/projects" for ::1 at 2022-10-09 09:09:36 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 299ms (Views: 297.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:09:39 +1100
+Started GET "/auth/github/callback?code=ced00740d90a152c8b41&state=39c78c4d94d38938f2508213e93d0ce7212c8a520ca5cf97" for ::1 at 2022-10-09 09:09:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github/callback"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (11.3ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.4ms)
+Started GET "/auth/github/callback?code=ced00740d90a152c8b41&state=39c78c4d94d38938f2508213e93d0ce7212c8a520ca5cf97" for ::1 at 2022-10-09 09:11:09 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.1ms)
+Started GET "/auth/github/callback?code=ced00740d90a152c8b41&state=39c78c4d94d38938f2508213e93d0ce7212c8a520ca5cf97" for ::1 at 2022-10-09 09:11:12 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+Started GET "/auth/github/callback?code=ced00740d90a152c8b41&state=39c78c4d94d38938f2508213e93d0ce7212c8a520ca5cf97" for ::1 at 2022-10-09 09:11:14 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.2ms)
+Started GET "/" for ::1 at 2022-10-09 09:11:56 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 434ms (Views: 413.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:12:02 +1100
+Started GET "/auth/github/callback?code=ed14f40450a17017db74&state=b12b61abc68216c49ae1361da2641ceecddc0820a28441bc" for ::1 at 2022-10-09 09:12:07 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"ed14f40450a17017db74", "state"=>"b12b61abc68216c49ae1361da2641ceecddc0820a28441bc"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("uid", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["uid", "26340792"], ["name", "Claudia Ruiz"], ["created_at", "2022-10-08 22:12:08.039153"], ["updated_at", "2022-10-08 22:12:08.039153"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Sections</h1>
+    2:       <ul>
+    3:       <% @sections.each do |section| %>
+    4:         <li><%= link_to section.title, section_path(section) %></li>
+    5:       <% end %>
+    6:       </ul>
+  
+app/views/sections/index.html.erb:3:in `_app_views_sections_index_html_erb__3260249923386528020_70269503813400'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.6ms)
+Started GET "/" for ::1 at 2022-10-09 09:14:48 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:14:50 +1100
+Started GET "/auth/github/callback?code=56312a6455ace10c3d7e&state=b4e86f65b0d4c3efa9eac140092b4fd5e5117792d0ac49f8" for ::1 at 2022-10-09 09:14:54 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"56312a6455ace10c3d7e", "state"=>"b4e86f65b0d4c3efa9eac140092b4fd5e5117792d0ac49f8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4:   <h2>GitHub UID: <%= @user.uid %></h2>
+    5: 
+    6:   <ul>
+    7:   <% @projects.each do |project| %>
+    8:     <li><%= link_to project.title, project_path(project) %></li>
+    9:   <% end %>
+   10:   </ul>
+  
+app/views/projects/index.html.erb:7:in `_app_views_projects_index_html_erb__4106827191867674029_70269550735380'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (23.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.3ms)
+Started GET "/auth/github/callback?code=56312a6455ace10c3d7e&state=b4e86f65b0d4c3efa9eac140092b4fd5e5117792d0ac49f8" for ::1 at 2022-10-09 09:17:13 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+Started GET "/" for ::1 at 2022-10-09 09:18:16 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2022-10-09 09:18:31 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:18:34 +1100
+Started GET "/auth/github/callback?code=7015b6f26a5b5e98e860&state=87e173541b6c197a0d2d7f015055e7cde886ac69f5371a43" for ::1 at 2022-10-09 09:18:38 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"7015b6f26a5b5e98e860", "state"=>"87e173541b6c197a0d2d7f015055e7cde886ac69f5371a43"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2: <% @projects.each do |project| %>
+    3:   <li><%= link_to project.title, project_path(project) %></li>
+    4: <% end %>
+    5: </ul>
+  
+app/views/projects/index.html.erb:2:in `_app_views_projects_index_html_erb__4106827191867674029_70269545721820'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/auth/github/callback?code=7015b6f26a5b5e98e860&state=87e173541b6c197a0d2d7f015055e7cde886ac69f5371a43" for ::1 at 2022-10-09 09:19:57 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+Started GET "/auth/github/" for ::1 at 2022-10-09 09:20:06 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (10.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.6ms)
+Started GET "/" for ::1 at 2022-10-09 09:20:10 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:20:12 +1100
+Started GET "/auth/github/callback?code=3dc6642c00f665c9968a&state=23981ff2b1ee14a9720bacba77ffdcf67a10653181b40705" for ::1 at 2022-10-09 09:20:12 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"3dc6642c00f665c9968a", "state"=>"23981ff2b1ee14a9720bacba77ffdcf67a10653181b40705"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2: <% @projects.each do |project| %>
+    3:   <li><%= link_to project.title, project_path(project) %></li>
+    4: <% end %>
+    5: </ul>
+  
+app/views/projects/index.html.erb:2:in `_app_views_projects_index_html_erb__4106827191867674029_70269550443880'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+Started POST "/auth/github" for ::1 at 2022-10-09 09:21:35 +1100
+Started GET "/auth/github/callback?code=a4ef2b6c15e6fd04e727&state=4f872d4742d9c3a07d9e01fb0a81e3e850b368488b97d895" for ::1 at 2022-10-09 09:21:36 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"a4ef2b6c15e6fd04e727", "state"=>"4f872d4742d9c3a07d9e01fb0a81e3e850b368488b97d895"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2: <% @projects.each do |project| %>
+    3:   <li><%= link_to project.title, project_path(project) %></li>
+    4: <% end %>
+    5: </ul>
+  
+app/views/projects/index.html.erb:2:in `_app_views_projects_index_html_erb__4106827191867674029_70269477325020'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+Started GET "/" for ::1 at 2022-10-09 09:26:04 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:26:07 +1100
+Started GET "/auth/github/callback?code=a469f7b354f91bb7e48b&state=bdfd27fc30e6cd2c90ac28d3a0585dcfcfae1ec472d474c8" for ::1 at 2022-10-09 09:26:12 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"a469f7b354f91bb7e48b", "state"=>"bdfd27fc30e6cd2c90ac28d3a0585dcfcfae1ec472d474c8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   <% end %>
+    13: 
+    14: <ul>
+    15:   <% @projects.each do |project| %>
+    16:     <li><%= link_to project.title, project_path(project) %></li>
+    17:   <% end %>
+    18: </ul>
+  
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb__4106827191867674029_70269545099200'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.6ms)
+Started POST "/auth/github" for ::1 at 2022-10-09 09:27:19 +1100
+Started GET "/auth/github/callback?code=0c158e074298d39ac16e&state=1ed237f5b12cafa3df94ef905c2786a283a99161732695e8" for ::1 at 2022-10-09 09:27:20 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"0c158e074298d39ac16e", "state"=>"1ed237f5b12cafa3df94ef905c2786a283a99161732695e8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: 
+    3: <ul>
+    4:   <% @projects.each do |project| %>
+    5:     <li><%= link_to project.title, project_path(project) %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb__4106827191867674029_70269549459160'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+Started GET "/" for ::1 at 2022-10-09 09:27:25 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:27:28 +1100
+Started GET "/auth/github/callback?code=b3ecf4479022906936b4&state=7ab14fc1f4e0361f5cd3ab7114a97d85f0af7651054acda6" for ::1 at 2022-10-09 09:27:29 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"b3ecf4479022906936b4", "state"=>"7ab14fc1f4e0361f5cd3ab7114a97d85f0af7651054acda6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: 
+    3: <ul>
+    4:   <% @projects.each do |project| %>
+    5:     <li><%= link_to project.title, project_path(project) %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb__4106827191867674029_70269477257280'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+Started GET "/" for ::1 at 2022-10-09 09:27:56 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/github" for ::1 at 2022-10-09 09:27:57 +1100
+Started GET "/auth/github/callback?code=5598abac195e2af3d821&state=8b415b0dd16c50446dfcf84a57d76dc8ffe768d22c0facce" for ::1 at 2022-10-09 09:28:01 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"5598abac195e2af3d821", "state"=>"8b415b0dd16c50446dfcf84a57d76dc8ffe768d22c0facce"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "26340792"], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: 
+    3: <ul>
+    4:   <% @projects.each do |project| %>
+    5:     <li><%= link_to project.title, project_path(project) %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb__4106827191867674029_70269552077060'
+app/controllers/sessions_controller.rb:10:in `create'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+Started GET "/auth/github/callback?code=5598abac195e2af3d821&state=8b415b0dd16c50446dfcf84a57d76dc8ffe768d22c0facce" for ::1 at 2022-10-09 09:28:11 +1100
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+#<SnakyHash::StringKeyed error="bad_verification_code" error_description="The code passed is incorrect or expired." error_uri="https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#bad-verification-code">):
+  
+oauth2 (2.0.9) lib/oauth2/access_token.rb:74:in `initialize'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `new'
+oauth2 (2.0.9) lib/oauth2/access_token.rb:25:in `from_hash'
+oauth2 (2.0.9) lib/oauth2/client.rb:336:in `build_access_token'
+oauth2 (2.0.9) lib/oauth2/client.rb:329:in `parse_response'
+oauth2 (2.0.9) lib/oauth2/client.rb:191:in `get_token'
+oauth2 (2.0.9) lib/oauth2/strategy/auth_code.rb:37:in `get_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.8.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.1.0) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.1.0) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.1.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.0) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mac/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.0ms)
+Started GET "/" for ::1 at 2022-10-09 09:28:16 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:28:22 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 112ms (Views: 53.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:28:24 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:28:26 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:28:27 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:28:29 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:28:37 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:29:04 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:29:43 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:29:49 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (2.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects/1/edit" for ::1 at 2022-10-09 09:29:53 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/edit.html.erb within layouts/application (154.7ms)
+Completed 200 OK in 181ms (Views: 178.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:29:56 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:32:01 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:32:23 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:39:41 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1/edit" for ::1 at 2022-10-09 09:39:45 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/_form.html.erb (8.8ms)
+  Rendered projects/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 45ms (Views: 38.4ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/projects/1" for ::1 at 2022-10-09 09:39:49 +1100
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+2ScGdgNiJc/Elg+Ir6SRzFLC78H80MbjVDXYj8NPwartR2Lts03Bmy41XD6aHtBkj7z/UEhaCIOjHkEfKeqQ==", "project"=>{"title"=>"Calculator", "description"=>"distances", "skill_ids"=>["", "1"]}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" = 1[0m
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "skills" SET "project_id" = NULL WHERE "skills"."project_id" = ? AND "skills"."id" = 2[0m  [["project_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 11ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:39:49 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:39:52 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:40:13 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:40:16 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 09:40:17 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 09:40:26 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 09:41:34 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/_form.html.erb (2.2ms)
+  Rendered skills/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/edit" for ::1 at 2022-10-09 09:41:40 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Skill with 'id'=edit):
+  
+app/controllers/skills_controller.rb:7:in `show'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.0ms)
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 09:41:47 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/_form.html.erb (3.9ms)
+  Rendered skills/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/skills/1" for ::1 at 2022-10-09 09:41:52 +1100
+Processing by SkillsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mn/1juBnUjGx7Qio7c+4wtq8mEEq8nbsr4iFPSYY+8D/PLOIqdxQz/Sjop3WrONmwDFPoCPpPkBJh/eEvxZRlQ==", "skill"=>{"name"=>"JavaScript"}, "commit"=>"Update Skill", "id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:41:52 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:42:35 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 147ms (Views: 143.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:42:42 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:43:00 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 95ms (Views: 89.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1/edit" for ::1 at 2022-10-09 09:43:04 +1100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skills".id FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/_form.html.erb (10.6ms)
+  Rendered projects/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/1" for ::1 at 2022-10-09 09:43:09 +1100
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JjWznDrZ8elbcO7fwa7xkaei87H8NdMF74Y8Q6lBH0TrdvWac2LzFx4+ROr6zao1vS8kUPUum6kJiU76ME+1EQ==", "project"=>{"title"=>"Calculator 3", "description"=>"distances", "skill_ids"=>["", "1", "2"]}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" IN (1, 2)[0m
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "skills" SET "project_id" = ? WHERE "skills"."id" = ?[0m  [["project_id", 1], ["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "projects" SET "title" = ? WHERE "projects"."id" = ?[0m  [["title", "Calculator 3"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:43:09 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:43:12 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2" for ::1 at 2022-10-09 09:43:14 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/projects/2" for ::1 at 2022-10-09 09:43:17 +1100
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"btAIiq+tE5JRh600wHvzMHR5Wd+scYZagAnUNaYDTq2jk06M5hYRbBTJBwH7GKiUbvSOPqVqzvZmBqaMPw3k+A==", "id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 2]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 13ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:43:17 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-10-09 09:43:20 +1100
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered projects/_form.html.erb (7.8ms)
+  Rendered projects/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/projects" for ::1 at 2022-10-09 09:43:29 +1100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohdkDtHNpGNjlk5B5uFa698WAhhmhVF/uuGVnpE/uclvVCIImHamnSbY5HTdggFPxZvV+W+eGdNc7ucnCDETnA==", "project"=>{"title"=>"Another project", "description"=>"", "skill_ids"=>["", "2"]}, "commit"=>"Create Project"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Another project"], ["description", ""]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "skills" SET "project_id" = ? WHERE "skills"."id" = ?[0m  [["project_id", 3], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/3" for ::1 at 2022-10-09 09:43:29 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for ::1 at 2022-10-09 09:43:31 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/1" for ::1 at 2022-10-09 09:43:33 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:43:35 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1/edit" for ::1 at 2022-10-09 09:43:38 +1100
+Processing by SkillsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/edit.html.erb within layouts/application
+  Rendered skills/_form.html.erb (3.5ms)
+  Rendered skills/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 70ms (Views: 64.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/skills/1" for ::1 at 2022-10-09 09:43:42 +1100
+Processing by SkillsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqofkVRSeQrP+9ETEIRotrWyqRQRetL225acl9odnQhX6VmXHel79Iq1eyYr5zMSrz9+9Rhhmlo9me4uQxM3XQ==", "skill"=>{"name"=>"JavaScript 2022"}, "commit"=>"Update Skill", "id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "skills" SET "name" = ? WHERE "skills"."id" = ?[0m  [["name", "JavaScript 2022"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/1
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-09 09:43:42 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:43:46 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/skills/new" for ::1 at 2022-10-09 09:43:50 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  Rendered skills/_form.html.erb (3.7ms)
+  Rendered skills/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/skills" for ::1 at 2022-10-09 09:43:55 +1100
+Processing by SkillsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afgy8eebp5woNesk5b6TuVnXeBvslLUnoJ4krk9SiQSku3T3riClYm17QRHe3cgdQ1qv+uWP/YtGkVYX1lwjUQ==", "skill"=>{"name"=>"Another Skill"}, "commit"=>"Create Skill"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "skills" ("name") VALUES (?)[0m  [["name", "Another Skill"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/4
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/skills/4" for ::1 at 2022-10-09 09:43:55 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-09 09:43:58 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered skills/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.4ms)
+
+
