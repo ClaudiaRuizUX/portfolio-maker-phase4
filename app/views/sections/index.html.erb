@@ -2,6 +2,12 @@
       <ul>
       <% @sections.each do |section| %>
         <li><%= link_to section.title, section_path(section) %></li>
+        <% if defined?(@section.projects) %>
+        <% @section.projects.each do |t| %>
+              <h3><%= link_to t.title, t.description, project_path(t.id) if t.id %></h3>
+            <% end %>
+          <% else %>
+            <h3>No Project</h3>
+        <% end %>
       <% end %>
       </ul>
-
