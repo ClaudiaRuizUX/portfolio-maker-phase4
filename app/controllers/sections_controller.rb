@@ -1,7 +1,7 @@
 class SectionsController < ApplicationController
 	def index
 		@sections = Section.all
-		@projects = Project.all
+		# @skills = Skill.find_by ({section_id: })
 	end  
 
 	def show
