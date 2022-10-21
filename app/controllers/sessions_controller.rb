@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   
       session[:user_id] = @user.id
   
-      render 'projects/index'
+      redirect_to '/'
     end
   
     def destroy
