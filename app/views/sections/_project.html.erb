@@ -1,0 +1,7 @@
+<% if defined?(@section.projects) %>
+<% @section.projects.each do |project| %>
+  <h3><%= link_to project.title, project_path(project.id) if project.id %></h3>
+<% end %>
+<% else %>
+<h3>No Projects</h3>
+<% end %>

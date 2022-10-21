@@ -1,18 +1,3 @@
 <%= link_to 'Back', sections_path %>
 <h1>New Section</h1>
-
-<%= form_for(@section) do |p| %>
-  <div class="field">
-    <%= p.label :title, 'Section Title:' %><br>
-    <%= p.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= p.label :skill_id, 'Section Skills:' %><br>
-    <%= p.collection_check_boxes :skill_ids, @skills, :id, :name %>
-  </div>
-
-  <div class="actions">
-    <%= p.submit %>
-  </div>
-<% end %>
+<%= render 'form' %>
