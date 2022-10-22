@@ -1,6 +1,8 @@
 <h1>Skills</h1>
 <ul>
-  <% @skills.each do |s| %>
-    <li><%= link_to s.name, skill_path(s) %></li>
+  <% @skills.each do |skill| %>
+    <li><%= link_to skill.name, skill_path(skill) %></li>
+    <li><%= link_to skill.project.title, project_skills_path(skill.project) %></li>
+
   <% end %>
 </ul>

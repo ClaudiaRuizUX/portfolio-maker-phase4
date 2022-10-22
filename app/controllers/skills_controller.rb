@@ -1,24 +1,56 @@
 class SkillsController < ApplicationController
     def index
-      @skills = Skill.all
+      if params[:project_id]
+        @skills = Project.find(params[:project_id]).skills
+      else
+        @skills = Skill.all
+      end
     end
-  
+    
     def show
-      @skill = Skill.find(params[:id])
+        if params[:project_id]
+          project = Project.find_by(id: params[:project_id])
+          if project.nil?
+            redirect_to projects_path, alert: "Project not found."
+          else
+            @skill = project.skills.find_by(id: params[:id])
+            redirect_to project_skills_path(project), alert: "Skill not found." if @skill.nil?
+          end
+        else
+        @skill = Skill.find(params[:id])
+      end
     end
   
     def new
-      @skill = Skill.new
-      @projects = Project.all
+      if params[:project_id] && !Project.exists?(params[:project_id])
+        redirect_to projects_path, alert: "Project not found."
+      else
+        @skill = Skill.new(project_id: params[:project_id])
+      end
+      # @skill = Skill.new
+      # @projects = Project.all
     end
 
     def create
       skill = Skill.create(skill_params)
       redirect_to skill_path(skill)
+      # @skill = Skill.new(skill_params)
+      # @skill.save
+      # redirect_to skill_path(@skill)
     end
   
     def edit
-      @skill = Skill.find(params[:id])
+      if params[:project_id]
+        project = Project.find_by(id: params[:project_id])
+        if project.nil?
+          redirect_to projects_path, alert: "Project not found."
+          else
+            @skill = project.skills.find_by(id: params[:id])
+            redirect_to project_skills_path(project), alert: "Skill not found." if @skill.nil?
+        end
+      else
+        @skill = Skill.find(params[:id])
+      end
     end
   
     def update

@@ -1,4 +1,11 @@
 <%= form_for(@skill) do |s| %>
+  
+    <% if @skill.project.nil? %>
+      <%= s.select :project_id, options_from_collection_for_select(Project.all, :id, :title) %><br>
+      <% else %>
+      <%= f.hidden_field :project_id %>
+    <% end %>
+  
     <div class="field">
         <%= s.label :name, 'Skill Name:' %><br>
         <%= s.text_field :name %>
@@ -7,4 +14,4 @@
     <div class="actions">
         <%= s.submit %>
     </div>
-<% end %>
+  <% end %>
