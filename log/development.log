@@ -12269,3 +12269,449 @@ app/views/skills/edit.html.erb:3:in `_app_views_skills_edit_html_erb___449344379
   Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at bin/rails:4)
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSkills (20221001101709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101709"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20221001101724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101724"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSections (20221001101734)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101734"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToSkills (20221001101754)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "skills" ADD "project_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "skills" ADD "section_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221001101754"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221007072014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007072014"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-22 04:47:33.932841"], ["updated_at", "2022-10-22 04:47:33.932841"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Software"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "sections" ("title") VALUES (?)[0m  [["title", "Design"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Calculator"], ["description", "distances"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description") VALUES (?, ?)[0m  [["title", "Map"], ["description", "use Esri"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["project_id", 1], ["section_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "skills" ("name", "project_id", "section_id") VALUES (?, ?, ?)[0m  [["name", "Wireframes"], ["project_id", 2], ["section_id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2022-10-22 15:47:56 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `skill' for #<#<Class:0x00007ff7f9845c80>:0x00007ff7fd216ce8>
+Did you mean?  skill_url):
+    3:   <ul>
+    4:   <% @projects.each do |project| %>
+    5:     <li>
+    6:     <li><%= link_to skill.project.title, project_skills_path(skill.project) %></li>
+    7:     </li>
+    8:   <% end %>
+    9: </ul>
+  
+app/views/projects/index.html.erb:6:in `block in _app_views_projects_index_html_erb__712478800296331784_70351509928400'
+app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb__712478800296331784_70351509928400'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+Started GET "/projects" for ::1 at 2022-10-22 15:48:05 +1100
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `skill' for #<#<Class:0x00007ff7f9845c80>:0x00007ff7fd0131d0>
+Did you mean?  skill_url):
+    3:   <ul>
+    4:   <% @projects.each do |project| %>
+    5:     <li>
+    6:     <li><%= link_to skill.project.title, project_skills_path(skill.project) %></li>
+    7:     </li>
+    8:   <% end %>
+    9: </ul>
+  
+app/views/projects/index.html.erb:6:in `block in _app_views_projects_index_html_erb__712478800296331784_70351539183180'
+app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb__712478800296331784_70351539183180'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.5ms)
+Started GET "/projects/1" for ::1 at 2022-10-22 15:48:11 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered projects/show.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 503ms (Views: 490.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-22 15:48:14 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (3.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 36.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/skills" for ::1 at 2022-10-22 15:48:22 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered skills/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 102ms (Views: 89.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/2/skills" for ::1 at 2022-10-22 15:48:27 +1100
+Processing by SkillsController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered skills/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/2/skills" for ::1 at 2022-10-22 15:48:37 +1100
+Processing by SkillsController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered skills/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-22 15:48:43 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-22 16:01:36 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"skills", :project_id=>nil} missing required keys: [:project_id]):
+    1: <%= link_to 'Back', skills_path %>
+    2: <%= link_to "New Project", new_project_skill_path(@project) %>
+    3: 
+    4: <h1><%= @skill.name %></h1>
+    5: 
+  
+app/views/skills/show.html.erb:2:in `_app_views_skills_show_html_erb__2417707784429418561_70351510480620'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+Started GET "/skills/1" for ::1 at 2022-10-22 16:02:59 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"skills", :project_id=>nil} missing required keys: [:project_id]):
+    1: <%= link_to 'Back', skills_path %>
+    2: # <%= link_to "New Project", new_project_skill_path(@project) %>
+    3: 
+    4: <h1><%= @skill.name %></h1>
+    5: 
+  
+app/views/skills/show.html.erb:2:in `_app_views_skills_show_html_erb__2417707784429418561_70351510366680'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+Started GET "/skills/1" for ::1 at 2022-10-22 16:03:19 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"skills", :project_id=>nil} missing required keys: [:project_id]):
+    3: <h1><%= @skill.name %></h1>
+    4: 
+    5: <p>Projects:</p>
+    6: <%= link_to "New Project", new_project_skill_path(@project) %>
+    7: <% @project.skills.each do |skill| %>
+    8:   <div><%= skill.name %></div>
+    9:   <p>by <%= link_to @skill.project.title, project_path(@skill.project) if @skill.project%> 
+  
+app/views/skills/show.html.erb:6:in `_app_views_skills_show_html_erb__2417707784429418561_70351564367020'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.1ms)
+Started GET "/skills/1" for ::1 at 2022-10-22 16:03:46 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `skills' for nil:NilClass):
+    3: <h1><%= @skill.name %></h1>
+    4: 
+    5: <p>Projects:</p>
+    6: <% @project.skills.each do |skill| %>
+    7:   <div><%= skill.name %></div>
+    8:   <p>by <%= link_to @skill.project.title, project_path(@skill.project) if @skill.project%> 
+    9:   (<%= link_to "Edit Skill", edit_project_skill_path(@skill.project, @skill) if @skill.project %>)</p>
+  
+app/views/skills/show.html.erb:6:in `_app_views_skills_show_html_erb__2417707784429418561_70351556598420'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.9ms)
+Started GET "/skills/" for ::1 at 2022-10-22 16:06:04 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered skills/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 363ms (Views: 341.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/skills/" for ::1 at 2022-10-22 16:08:49 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered skills/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/skills/1" for ::1 at 2022-10-22 16:08:51 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `projects' for #<Skill id: 1, name: "JavaScript", project_id: 1, section_id: 1>
+Did you mean?  project
+               project=):
+    3: <h1><%= @skill.name %></h1>
+    4: 
+    5: <p>Projects:</p>
+    6: <% @skill.projects.each do |project| %>
+    7:   <div><%= project.title %></div>
+    8:   <p>by <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill%> 
+    9:   (<%= link_to "Edit Project", edit_skill_project_path(@project.skill, @project) if @project.skill %>)</p>
+  
+app/views/skills/show.html.erb:6:in `_app_views_skills_show_html_erb___4335009928673664119_70261537794880'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.7ms)
+Started GET "/skills/new" for ::1 at 2022-10-22 16:12:09 +1100
+Processing by SkillsController#new as HTML
+  Rendering skills/new.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered skills/_form.html.erb (29.7ms)
+  Rendered skills/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/skills" for ::1 at 2022-10-22 16:12:19 +1100
+Processing by SkillsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ro0ULKxo/uhCHCKipnXPOoqp8NEafgjOBgW4AsiCeh+U5h6Rtge6ma1qlTEfk5Zgw7HDdi07mERImwUvRxzCA==", "skill"=>{"project_id"=>"2", "name"=>"Writer"}, "commit"=>"Create Skill"}
+Unpermitted parameter: project_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("name") VALUES (?)[0m  [["name", "Writer"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/skills/3
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/skills/3" for ::1 at 2022-10-22 16:12:19 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `projects' for #<Skill id: 3, name: "Writer", project_id: nil, section_id: nil>
+Did you mean?  project
+               project=):
+    3: <h1><%= @skill.name %></h1>
+    4: 
+    5: <p>Projects:</p>
+    6: <% @skill.projects.each do |project| %>
+    7:   <div><%= project.title %></div>
+    8:   <p>by <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill%> 
+    9:   (<%= link_to "Edit Project", edit_skill_project_path(@project.skill, @project) if @project.skill %>)</p>
+  
+app/views/skills/show.html.erb:6:in `_app_views_skills_show_html_erb___4335009928673664119_70261534204680'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.9ms)
+Started GET "/skills/" for ::1 at 2022-10-22 16:12:25 +1100
+Processing by SkillsController#index as HTML
+  Rendering skills/index.html.erb within layouts/application
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered skills/index.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: <ul>
+    3:   <% @skills.each do |skill| %>
+    4:     <li><%= link_to skill.name, skill_path(skill) %></li>
+    5:     <li><%= link_to skill.project.title, project_skills_path(skill.project) %></li>
+    6: 
+    7:   <% end %>
+    8: </ul>
+  
+app/views/skills/index.html.erb:5:in `block in _app_views_skills_index_html_erb___3681810838745470298_70261496624240'
+app/views/skills/index.html.erb:3:in `_app_views_skills_index_html_erb___3681810838745470298_70261496624240'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+Started GET "/skills/3" for ::1 at 2022-10-22 16:12:29 +1100
+Processing by SkillsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSkill Load (0.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" WHERE "skills"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering skills/show.html.erb within layouts/application
+  Rendered skills/show.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `projects' for #<Skill id: 3, name: "Writer", project_id: nil, section_id: nil>
+Did you mean?  project
+               project=):
+    3: <h1><%= @skill.name %></h1>
+    4: 
+    5: <p>Projects:</p>
+    6: <% @skill.projects.each do |project| %>
+    7:   <div><%= project.title %></div>
+    8:   <p>by <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill%> 
+    9:   (<%= link_to "Edit Project", edit_skill_project_path(@project.skill, @project) if @project.skill %>)</p>
+  
+app/views/skills/show.html.erb:6:in `_app_views_skills_show_html_erb___4335009928673664119_70261520759860'
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)

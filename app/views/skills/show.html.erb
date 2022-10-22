@@ -1,15 +1,15 @@
 <%= link_to 'Back', skills_path %>
+
 <h1><%= @skill.name %></h1>
-<% if defined?(@skill.projects) %>
-  <ul>
-  <% @skill.projects.each do |p| %>
-    <li><%= link_to p.title, project_path(p.id) if p.id %></li>
-  <% end %>
-  </ul>
-<% else %>
-  <h3>No Projects</h3>
+
+<p>Projects:</p>
+<% @skill.projects.each do |project| %>
+  <div><%= project.title %></div>
+  <p>by <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill%> 
+  (<%= link_to "Edit Project", edit_skill_project_path(@project.skill, @project) if @project.skill %>)</p>
 <% end %>
 
-<%= link_to "edit", edit_skill_path(@skill) %>
-<%= button_to "Delete Skill", skill_path(@skill), method: :delete %>
+
+# <%= link_to "edit", edit_skill_path(@skill) %>
+# <%= button_to "Delete Skill", skill_path(@skill), method: :delete %>
 

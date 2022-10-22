@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  resources :projects, only: [:show] do
-    resources :skills, only: [:show, :index]
+  resources :projects, only: [:index, :show, :new, :create, :edit, :update] do
+    resources :skills, only: [:index, :show, :new, :create, :edit, :update]
   end
-  resources :skills, only: [:show] do
-    resources :projects, only: [:show, :index]
-  end
-  resources :projects, only: [:index, :show, :new, :create, :edit, :update]
-  resources :skills, only: [:index, :show, :new, :create, :edit, :update]
+
+  resources :projects
+  resources :skills
   resources :sections
   root 'projects#index'
   get '/auth/github/callback' => 'sessions#create'
   post '/' => 'sessions#destroy'
+
 end
