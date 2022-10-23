@@ -2,14 +2,8 @@
 
 <h1><%= @skill.name %></h1>
 
-<p>Projects:</p>
-<% @skill.projects.each do |project| %>
-  <div><%= project.title %></div>
-  <p>by <%= link_to @project.skill.name, skill_path(@project.skill) if @project.skill%> 
-  (<%= link_to "Edit Project", edit_skill_project_path(@project.skill, @project) if @project.skill %>)</p>
+<h3>Projects:</h3>
+<% @skills.each do |skill| %>
+  <p><%= link_to skill.project.title, project_skills_path(skill.project) %></p>
 <% end %>
-
-
-# <%= link_to "edit", edit_skill_path(@skill) %>
-# <%= button_to "Delete Skill", skill_path(@skill), method: :delete %>
 
