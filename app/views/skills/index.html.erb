@@ -2,7 +2,5 @@
 <ul>
   <% @skills.each do |skill| %>
     <li><%= link_to skill.name, skill_path(skill) %></li>
-    <li><%= link_to skill.project.title, project_skills_path(skill.project) %></li>
-
   <% end %>
 </ul>

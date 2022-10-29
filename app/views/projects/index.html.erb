@@ -1,7 +1,9 @@
 <h1>Projects</h1>
-  <% @projects.each do |project| %>
-    <ul>
-      <li><%= link_to project.title, project_path(project) %></li>
-    </ul>
-  <% end %>
+  <ul>
+    <% @projects.each do |project| %>
+        <li><%= link_to project.title, project_path(project) %></li>
+    <% end %>
+  </ul>
+
+
 

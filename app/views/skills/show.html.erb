@@ -2,8 +2,13 @@
 
 <h1><%= @skill.name %></h1>
 
-<h3>Projects:</h3>
-<% @skills.each do |skill| %>
-  <p><%= link_to skill.project.title, project_skills_path(skill.project) %></p>
+<% if defined?(@project.skills) %>
+  <% @project.skills.each do |skill| %>
+    <h3>Skill: <%= link_to skill.name, skill_path(skill.id) if skill.id %></h3>
+    <li><%= link_to skill.project.title, skill_projects_path(project.skill) %></li>
+  <% end %>
+<% else %>
+  <h3>No Projects</h3>
 <% end %>
+
 
