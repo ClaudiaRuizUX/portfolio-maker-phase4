@@ -8,19 +8,18 @@ class SkillsController < ApplicationController
     end
 
     def show
-        if params[:project_id]
-          project = Project.find_by(id: params[:project_id])
-          if project.nil?
-            redirect_to projects_path, alert: "Project not found."
-          else
-            @skill = project.skills.find_by(id: params[:id])
-            redirect_to project_skills_path(project), alert: "Skill not found." if @skill.nil?
-          end
+      if params[:project_id]
+        project = Project.find_by(id: params[:project_id])
+        if project.nil?
+          redirect_to projects_path, alert: "Project not found."
         else
-          @skill = Skill.find(params[:id])
+          @skill = project.skills.find_by(id: params[:id])
+          redirect_to project_skills_path(project), alert: "Skill not found." if @skill.nil?
         end
+      else
+        @skill = Skill.find(params[:id])
       end
-
+    end
 
     def new
       if params[:project_id] && !Project.exists?(params[:project_id])

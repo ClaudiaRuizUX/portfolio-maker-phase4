@@ -1,8 +1,7 @@
 <h1>Sections</h1>
   <ul>
   <% @sections.each do |section| %>
-    <li><%= link_to section.name, section_path(section) %></li>
-    <%= render 'project' %>
+    <li><%= link_to section.title, section_path(section) %></li>
   <% end %>
   </ul>
 

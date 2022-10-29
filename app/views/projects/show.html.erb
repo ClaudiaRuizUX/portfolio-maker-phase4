@@ -1,5 +1,10 @@
+<%= link_to 'Back', projects_path %>
 <h1><%= @project.title %></h1>
 <%= @project.description %></0>
+
+<%= link_to "edit", edit_project_path(@project) %>
+<%= button_to "Delete Project", project_path(@project), method: :delete %>
+
 
 <% if defined?(@project.skills) %>
   <% @project.skills.each do |skill| %>

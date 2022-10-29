@@ -1,7 +1,6 @@
 class SectionsController < ApplicationController
 	def index
 		@sections = Section.all
-		@sections = @skill.projects
 	end  
 
 	def show
