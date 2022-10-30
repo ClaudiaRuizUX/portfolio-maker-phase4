@@ -23,9 +23,9 @@ class SectionsController < ApplicationController
 	end
 
 	def update
-      section = Section.find(params[:id])
-	  section.update(section_params)
-	  redirect_to section_path(section)
+		section = Section.find(params[:id])
+		section.update(section_params)
+		redirect_to section_path(section)
 	end
 
 	def destroy
